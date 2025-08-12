@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Niomi Oliviel's personal landing page for a professional portfolio.">
+  <title>Niomi Oliviel | Personal Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="nav-brand">Niomi Oliviel</div>
+        <ul class="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section class="hero">
+        <h1>Hi, I'm Niomi Oliviel</h1>
+        <p>Incoming Health Sciences Student</p>
+        <a href="#contact" class="cta">Let's Connect</a>
+      </section>
+      <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I am an enthusiastic student currently diving into the exciting world of AI. As a newcomer to artificial intelligence, I'm passionate about learning its applications and exploring how it can be used to innovate and solve real-world problems.</p>
+      </section>
+      <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <div class="skill">
+            <div class="skill-label">Git <span>75%</span></div>
+            <div class="progress-bar"><div class="progress" style="width:75%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">CSS <span>70%</span></div>
+            <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">HTML <span>65%</span></div>
+            <div class="progress-bar"><div class="progress" style="width:65%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">JavaScript <span>60%</span></div>
+            <div class="progress-bar"><div class="progress" style="width:60%"></div></div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <div class="contact-links">
+          <a href="mailto:niomioliviel06@email.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://instagram.com/niomi.o" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/Nxmi06" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://x.com/NiomiOliviel" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </section>
+    </div>
+  <section class="contact-form-section">
+    <h2>Send Me a Message</h2>
+    <form id="contactForm" novalidate>
+      <div class="form-group">
+        <label for="name">Name<span style="color:red">*</span></label>
+        <input type="text" id="name" name="name" required>
+        <span class="error-message" id="nameError"></span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email<span style="color:red">*</span></label>
+        <input type="email" id="email" name="email" required>
+        <span class="error-message" id="emailError"></span>
+      </div>
+      <div class="form-group">
+        <label for="message">Message<span style="color:red">*</span></label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <span class="error-message" id="messageError"></span>
+      </div>
+      <button type="submit" class="cta">Send Message</button>
+      <div id="formSuccess" style="color:green; margin-top:10px; display:none;">Thank you! Your message has been sent.</div>
+    </form>
+    <style>
+      .contact-form-section {
+        margin-top: 2rem;
+        background: #f9f9f9;
+        padding: 2rem;
+        border-radius: 8px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      }
+      .form-group {
+        margin-bottom: 1.2rem;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 0.4rem;
+        font-weight: 500;
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.6rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+      .form-group .error-message {
+        color: #d32f2f;
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
+        display: block;
+        min-height: 1.2em;
+      }
+      .contact-form-section .cta {
+        background: #007bff;
+        color: #fff;
+        border: none;
+        padding: 0.7rem 1.5rem;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .contact-form-section .cta:hover {
+        background: #0056b3;
+      }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const messageError = document.getElementById('messageError');
+        const formSuccess = document.getElementById('formSuccess');
+
+        function validateEmail(email) {
+          // Simple email regex
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          let valid = true;
+
+          // Name validation
+          if (nameInput.value.trim() === '') {
+            nameError.textContent = 'Please enter your name.';
+            valid = false;
+          } else {
+            nameError.textContent = '';
+          }
+
+          // Email validation
+          if (emailInput.value.trim() === '') {
+            emailError.textContent = 'Please enter your email.';
+            valid = false;
+          } else if (!validateEmail(emailInput.value.trim())) {
+            emailError.textContent = 'Please enter a valid email address.';
+            valid = false;
+          } else {
+            emailError.textContent = '';
+          }
+
+          // Message validation
+          if (messageInput.value.trim() === '') {
+            messageError.textContent = 'Please enter your message.';
+            valid = false;
+          } else {
+            messageError.textContent = '';
+          }
+
+          if (valid) {
+            // Simulate successful submission
+            form.reset();
+            formSuccess.style.display = 'block';
+            setTimeout(() => {
+              formSuccess.style.display = 'none';
+            }, 4000);
+          }
+        });
+      });
+    </script>
+  </section>
+  </main>
+  <footer>
+    <div class="container">
+      &copy; 2025 Niomi Oliviel. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html> 
