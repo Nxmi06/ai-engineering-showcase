@@ -251,8 +251,8 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: lightcoral;
-  opacity: 0.1;
+  background-color: lightpink;
+  opacity: 0.3;
   z-index: -1;
 }
 
@@ -492,7 +492,16 @@ section h2::after {
 
 /* Projects Section */
 .projects-section {
-  background-color: lightblue;
+  background-color: lightcyan;
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+/* Projects section background */
+#projects {
+  background-color: lightcyan;
   border-radius: var(--radius-xl);
   padding: var(--space-2xl);
   box-shadow: var(--shadow-sm);
@@ -586,6 +595,14 @@ section h2::after {
 }
 
 /* Experience Section */
+#experience {
+  background-color: lightcyan;
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
 .timeline {
   max-width: 900px;
   margin: 0 auto;
