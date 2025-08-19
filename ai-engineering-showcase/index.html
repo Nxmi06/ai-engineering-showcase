@@ -7,89 +7,224 @@
   <meta name="description" content="Niomi Oliviel's personal landing page for a professional portfolio.">
   <title>Niomi Oliviel | Personal Landing Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <a href="#main" class="sr-only">Skip to main content</a>
   <header>
     <div class="container">
-      <nav>
+      <nav role="navigation" aria-label="Primary">
         <div class="nav-brand">Niomi Oliviel</div>
         <ul class="nav-menu">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <main>
+  <main id="main">
     <div class="container">
-      <section class="hero">
+      <section class="hero" aria-label="Introduction">
         <h1>Hi, I'm Niomi Oliviel</h1>
         <p>Incoming Health Sciences Student</p>
-        <a href="#contact" class="cta">Let's Connect</a>
+        <a href="#contact" class="cta" aria-label="Jump to contact section">Let's Connect</a>
       </section>
-      <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>I am an enthusiastic student currently diving into the exciting world of AI. As a newcomer to artificial intelligence, I'm passionate about learning its applications and exploring how it can be used to innovate and solve real-world problems.</p>
-      </section>
-      <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <div class="skills-list">
-          <div class="skill">
-            <div class="skill-label">Git <span>75%</span></div>
-            <div class="progress-bar"><div class="progress" style="width:75%"></div></div>
-          </div>
-          <div class="skill">
-            <div class="skill-label">CSS <span>70%</span></div>
-            <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
-          </div>
-          <div class="skill">
-            <div class="skill-label">HTML <span>65%</span></div>
-            <div class="progress-bar"><div class="progress" style="width:65%"></div></div>
-          </div>
-          <div class="skill">
-            <div class="skill-label">JavaScript <span>60%</span></div>
-            <div class="progress-bar"><div class="progress" style="width:60%"></div></div>
+
+      <section id="about" class="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <div class="about-content">
+          <img class="about-photo" src="assets/images/profile.jpg" alt="Portrait of Niomi Oliviel" width="180" height="180">
+          <div>
+            <p>I am an enthusiastic student currently diving into the exciting world of AI. As a newcomer to artificial intelligence, I'm passionate about learning its applications and exploring how it can be used to innovate and solve real-world problems.</p>
+            <ul class="about-highlights" aria-label="Personality highlights">
+              <li>Curious and growth-minded</li>
+              <li>Collaborative and empathetic team member</li>
+              <li>Detail-oriented with a love for problem-solving</li>
+            </ul>
           </div>
         </div>
       </section>
-      <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <div class="contact-links">
-          <a href="mailto:niomioliviel06@email.com" title="Email"><i class="fas fa-envelope"></i></a>
-          <a href="https://instagram.com/niomi.o" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/Nxmi06" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://x.com/NiomiOliviel" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+
+      <section id="skills" class="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <div class="skills-list" role="list">
+          <div class="skill" role="listitem">
+            <div class="skill-label">Git <span>75%</span></div>
+            <div class="progress-bar" aria-hidden="true"><div class="progress" style="width:75%"></div></div>
+          </div>
+          <div class="skill" role="listitem">
+            <div class="skill-label">CSS <span>70%</span></div>
+            <div class="progress-bar" aria-hidden="true"><div class="progress" style="width:70%"></div></div>
+          </div>
+          <div class="skill" role="listitem">
+            <div class="skill-label">HTML <span>65%</span></div>
+            <div class="progress-bar" aria-hidden="true"><div class="progress" style="width:65%"></div></div>
+          </div>
+          <div class="skill" role="listitem">
+            <div class="skill-label">JavaScript <span>60%</span></div>
+            <div class="progress-bar" aria-hidden="true"><div class="progress" style="width:60%"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <img src="https://via.placeholder.com/600x400?text=Project+1" alt="Screenshot of Project 1" width="600" height="400">
+            <div class="project-content">
+              <h3>Project One</h3>
+              <p>A brief description of the project highlighting the problem it solves and your contribution.</p>
+              <ul class="project-tags" aria-label="Tech stack">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn btn--primary" href="#" aria-label="Open live demo for Project One">Live</a>
+                <a class="btn btn--secondary" href="#" aria-label="Open repository for Project One">Repo</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="https://via.placeholder.com/600x400?text=Project+2" alt="Screenshot of Project 2" width="600" height="400">
+            <div class="project-content">
+              <h3>Project Two</h3>
+              <p>Short overview of what this project does and the technologies used to build it.</p>
+              <ul class="project-tags" aria-label="Tech stack">
+                <li>Python</li>
+                <li>Flask</li>
+                <li>SQLite</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn btn--primary" href="#" aria-label="Open live demo for Project Two">Live</a>
+                <a class="btn btn--secondary" href="#" aria-label="Open repository for Project Two">Repo</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="https://via.placeholder.com/600x400?text=Project+3" alt="Screenshot of Project 3" width="600" height="400">
+            <div class="project-content">
+              <h3>Project Three</h3>
+              <p>Summary of the features and your key learnings or challenges overcome.</p>
+              <ul class="project-tags" aria-label="Tech stack">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>API</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn btn--primary" href="#" aria-label="Open live demo for Project Three">Live</a>
+                <a class="btn btn--secondary" href="#" aria-label="Open repository for Project Three">Repo</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="https://via.placeholder.com/600x400?text=Project+4" alt="Screenshot of Project 4" width="600" height="400">
+            <div class="project-content">
+              <h3>Project Four</h3>
+              <p>What problem this project addresses and how to try it out.</p>
+              <ul class="project-tags" aria-label="Tech stack">
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn btn--primary" href="#" aria-label="Open live demo for Project Four">Live</a>
+                <a class="btn btn--secondary" href="#" aria-label="Open repository for Project Four">Repo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Education</h2>
+        <div class="timeline">
+          <ul class="timeline-list">
+            <li class="timeline-item">
+              <time datetime="2024-09">Sep 2023 – July 2025</time>
+              <h3>Caribbean Advanced Profiency Examination (CAPE) – High School</h3>
+            </p>-Biology Unit 1 & 2
+              </p>-Chemistry Unit 1 & 2
+            </p>-Communication Studies
+          </P>-Caribbean Studies
+          </p>-Sociology Unit 1 & 2
+            </li>
+            <li class="timeline-item">
+              <time datetime="2023-06">Sep 2018 – July 2023</time>
+              <h3>Caribbean Secondary Education Certificate (CSEC) – High School</h3>
+            </p>-Biology 
+          </P>-Chemistry
+                </p>-English Language
+              </p>-English Literature
+                    </p>-Food, Nutrition & Health</p>
+                    </P>-Information Tech</P>
+                  </p>-Mathematics
+                      </p>-Principles of Business</p>
+                      
+            </li>
+            <li class="timeline-item">
+              <time datetime="2022-09">Oct 2024</time>
+              <h3>CSEC – Certificate of Top Performance at CSEC</h3>
+              <p>In Food, Nutrition & Health.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Me</h2>
+        <div class="contact-links" role="list">
+          <a role="listitem" href="mailto:niomioliviel06@email.com" title="Email" aria-label="Email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span class="sr-only">Email</span>
+          </a>
+          <a role="listitem" href="https://instagram.com/niomi.o" target="_blank" rel="noreferrer" title="Instagram" aria-label="Instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            <span class="sr-only">Instagram</span>
+          </a>
+          <a role="listitem" href="https://github.com/Nxmi06" target="_blank" rel="noreferrer" title="GitHub" aria-label="GitHub">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span>
+          </a>
+          <a role="listitem" href="https://x.com/NiomiOliviel" target="_blank" rel="noreferrer" title="Twitter" aria-label="Twitter">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span>
+          </a>
         </div>
       </section>
     </div>
-  <section class="contact-form-section">
-    <h2>Send Me a Message</h2>
-    <form id="contactForm" novalidate>
+
+  <section class="contact-form-section" aria-labelledby="message-heading">
+    <h2 id="message-heading">Send Me a Message</h2>
+    <form id="contactForm" novalidate aria-describedby="formDescription">
+      <p id="formDescription" class="sr-only">All fields marked with an asterisk are required.</p>
       <div class="form-group">
         <label for="name">Name<span style="color:red">*</span></label>
-        <input type="text" id="name" name="name" required>
-        <span class="error-message" id="nameError"></span>
+        <input type="text" id="name" name="name" required aria-required="true" aria-describedby="nameError">
+        <span class="error-message" id="nameError" aria-live="polite"></span>
       </div>
       <div class="form-group">
         <label for="email">Email<span style="color:red">*</span></label>
-        <input type="email" id="email" name="email" required>
-        <span class="error-message" id="emailError"></span>
+        <input type="email" id="email" name="email" required aria-required="true" aria-describedby="emailError">
+        <span class="error-message" id="emailError" aria-live="polite"></span>
       </div>
       <div class="form-group">
         <label for="message">Message<span style="color:red">*</span></label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        <span class="error-message" id="messageError"></span>
+        <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="messageError"></textarea>
+        <span class="error-message" id="messageError" aria-live="polite"></span>
       </div>
       <button type="submit" class="cta">Send Message</button>
-      <div id="formSuccess" style="color:green; margin-top:10px; display:none;">Thank you! Your message has been sent.</div>
+      <div id="formSuccess" style="color:green; margin-top:10px; display:none;" role="status" aria-live="polite">Thank you! Your message has been sent.</div>
     </form>
     <style>
       .contact-form-section {
         margin-top: 2rem;
-        background: #f9f9f9;
+        background: lightcyan;
         padding: 2rem;
         border-radius: 8px;
         max-width: 500px;
@@ -146,7 +281,6 @@
         const formSuccess = document.getElementById('formSuccess');
 
         function validateEmail(email) {
-          // Simple email regex
           return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
         }
 
@@ -154,7 +288,6 @@
           e.preventDefault();
           let valid = true;
 
-          // Name validation
           if (nameInput.value.trim() === '') {
             nameError.textContent = 'Please enter your name.';
             valid = false;
@@ -162,7 +295,6 @@
             nameError.textContent = '';
           }
 
-          // Email validation
           if (emailInput.value.trim() === '') {
             emailError.textContent = 'Please enter your email.';
             valid = false;
@@ -173,7 +305,6 @@
             emailError.textContent = '';
           }
 
-          // Message validation
           if (messageInput.value.trim() === '') {
             messageError.textContent = 'Please enter your message.';
             valid = false;
@@ -182,7 +313,6 @@
           }
 
           if (valid) {
-            // Simulate successful submission
             form.reset();
             formSuccess.style.display = 'block';
             setTimeout(() => {
@@ -199,5 +329,6 @@
       &copy; 2025 Niomi Oliviel. All rights reserved.
     </div>
   </footer>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html> 
