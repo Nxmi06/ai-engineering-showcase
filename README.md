@@ -53,7 +53,7 @@ To use the landing page, simply open the `index.html` file in your web browser. 
 # Contact
 For questions, feedback, or collaboration opportunities, feel free to reach out:
 
-- **GitHub:** [github.com/your-username](https://github.com/your-username)
-- **Email:** your-email@example.com
+- **GitHub:** [github.com/Nxmi06](https://github.com/Nxmi06)
+- **Email:** niomioliviel06@gmail.com
 
 Thank you for visiting the AI Engineering Showcase Landing Page!
