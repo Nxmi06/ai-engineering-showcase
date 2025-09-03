@@ -319,7 +319,7 @@ section h2::after {
 
 /* About Section */
 .about {
-  background-color: lightpink;
+  background-color: #ffeef8;
   border-radius: var(--radius-xl);
   padding: var(--space-2xl);
   box-shadow: var(--shadow-sm);
@@ -343,7 +343,7 @@ section h2::after {
 }
 
 .skill {
-  background-color: lightblue;
+  background-color: lightcyan;
   padding: var(--space-lg);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
